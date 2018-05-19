@@ -1,0 +1,26 @@
++ Describing Performance: percentiles, tail latencies, head-of-line blocking
++ Coping with Load: scaling up (vertical scaling), scaling out(horizontal scaling), shared-nothing architecture, elastic
+
+Maintainability
++ Operability, Simplicity, Evolvability
+
+Chapter 2: Data Models and Query Languages
++ Relational Model, Document Model, NoSQL
++ ORM, Many to One, Many to Many
++ Schema-on-read, schema-on-write
++ Declarative query, Map-Reduce
++ Graph Model: Property Graphs, Cipher Query, Triple-Store and SPARQL,
+
+Chapter 3: Storage and Retrieval
++ log-structured storage engines, page-oriented storage engines (B-trees)
++ Hash indexes (compaction), SSTables and LSM-Trees
+* SSTables: 
++ merge rapldly
++ spare index
++ compress group to write
++ in memory balanced-tree (meltable)
++ keep separate log files (immediately appended) in disk
+* LSM-Trees: (Log-Structured Merge Tree)
+* Performance optimizations: bloom filter, sized-tiered and leveled compaction, 
+* B-Tree: 
++ Branching factor
