@@ -1,0 +1,70 @@
+Part 1:
+The Optimizing Individual
+1. Decision Tree
+sunk cost, marginal analysis, 
+Time
+3.Risk: 
+risk-loving, risk-averse, risk-neutral
+expected value, variance, law of large number, adverse selection(Asymetric information)
+4. From ONE TO SOME
+comparative advantage
+coase theorem
+Efficent Market Hypothesis
+
+Part 2
+Strategic Interaction
+6. Cake cutting: moving knife procedure,
+Can we predict outcome of a game? (positive question)
+Is the predicted outcome good? (normative question)
+
+7. Pareto efficiency
+Pareto improvement
+
+8. Simultaneous-move games
+pay-off matrix, dominant strategy
+mutually destructive behavior(tragedy of the commons)
+paradox of thrift
+narrow perspective, broader perspective, unexpected benefits
+
+9. Auction
+An ascending auction
+A descending auction
+1st (or 2nd) price sealed-bid auction
+true value (2nd, ascending), shade your bid (descending, 1st)
+The Revenue Equivalence theorem
+
+10. From SOME to MANY
+Competitive market, monopoly, monopsony
+Price-taker, price-theory NO STRATEGIC INTERACTION => Supply and Demand
+
+Part 3
+Market Interaction
+11. Supply and Demand
+Competitive market => single market price
+market supply curve, market demand curve,
+substitutes, complements
+The Market equilibrium
+
+12. Taxes
+Legal incidence vs economic incidence
+legal incidence not detemine who share the tax burden equally
+==> elasticity
+
+13. Margins
+marginal cost curve
+marginal benefit curve
+up - down vs right-left
+
+14. Elasticity
+Changes in one variable effect different variable
+Price elasticity of demand and supply
+>1%: elastic, otherwise inelastic
+
+15. Big Picture
+Understand market's limitations
+Protect competition
+Give the market second chance: external cost, tax, cap, trade
+
+16. Conclusion
+Start => optimistic => competitive market => game theory 
+=> monopoly, tragedy of common, asymmetric information

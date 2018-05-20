@@ -1,0 +1,115 @@
+PART 1: A SINGLE MACROECONOMY
+
+Chapter 1: Introduction
+TWO BIG GOALS: 
+1. Increasing living standard in the long run
+Classic view: MACROECONOMY LIKE The classical view
+2. BOOM AND BUSTS LIKE GREAT DEPRESSION
+KEYNESIAN VIEW: government promote short-run stability
+
+Chapter 2: Unemployment
+recession (sick) - depression (deathbed)
+Unemploymented (if you're active looking for a paying job and can't find one)
+Discouraged workers
+Three types: frictional, structural, cyclical
+Minimum wage laws, Effiency wages => SUPPLY AND DEMAND => The price of labor 
+Preserve jobs => rigidity => better to leave market alone
+frictional + structural => natural rate of unemployment
+cyclical : sticky wages
+
+Chapter 3: Money
+MONEY => FACILITATES TRADE
+MONEY HAS VALUE because everybody believes that it does
+long-run growth money is neutral
+short-term, money policy => buy or sell bonds
+
+Chapter 4: Inflation
+Consumer Price Index (CPI) Representative bundle
+Easy question : Why it happen => print money
+Hard question: Why it matter? => money illusion => real price relative to the overall price level
+Real interest rate => purchasing power (nominal term >< real interest)
+Too much inflation => wage-price spiral (near double digits )
+Deflation => dangrerous too, 
+BEST TARGET => 2 - 3% inflation per year
+
+Chapter 5: Gross Domestic Product (GDP)
+The Value-Added Approach = Final Output - Imports
+The National Income Approach = Labor Income + Capital Income
+The Expenditure Approach (most common ways) = (C + I + G + Exports) - Imports
+Two variations: 
+Real GDP Adjust for Inflation => stable short-term, GDP deflator
+Real GDP Per Capita Adjusts for inflation and population => Long-term,
+GDP Ignores non-market issues: unpaid household labor, environmental quality, distribution,
+==> Human Development Index: Life Expectancy, Literacy Rates, Quality of Life
+
+Chapter 6: The Role of Goverment
+Monetary Policy
+Fiscal Policy ==> Long-Run Government DEBT
+Promote Long-run growth: property right, promoting innovation and protecting competition,
+investment in infrastructure and education, dealing with pollution, alleviate poverty.
+Goverment ALSO optimizing individuals : PUBLIC CHOICE THEORY
+SUPPLY-SIDE ECONOMISTS, 
+Government spending as % GDP, government regulations, balance between jungle and zoo.
+Micromanaging is a bad idea.
+
+Part Two: International Trade
+
+Chapter 7: Trade and Technology
+FACT 1: Technological progress create loseras as well as winners.
+FACT 2: Technological progress is pretty awesome
+FACT 3: Technological progress and trade are essentially indistinguishable
+
+Chapter 8: The Classical View of Trade
+SIMPLE And POWERFUL
+VIEW AS A WELL-ORGANIZED FAMILY
+
+Chapter 9: Complications
+Human-rights, Environment, National security, Infant Industry
+
+Chapter 10: Foreign aid
+Invisible Hand
+Humility
+Balancing act of foreign aid
+
+Chapter 11: Foreign currencies
+Foreign exchange market : supply and demand
+Government intervetion => fixed exchange rate, abandoned its own currency
+Impossible Trinity: FREELY TRADE CURRENCY, 
+INDEPENDENT MONETARY POLICY, FIXED EXCHANGE RATES: Only have two out of three
+
+
+Part Three: Global Macroeconomics
+Chapter 12: The End of Business Cycle
+Goldilocks economy
+TOP FACTOR CAUSES GREAT DEPRESSION => Bad monetary policy
+The financial system: Market failure (bank out of money) & goverment failure (bailout for loanning money)
+self fulfilling prophecy
+
+Chapter 13: The End of Poverty
+Rich countries, middle-income countries, low-income countries => catch-up
+Conditional Convergence (macroeconomist agree on some but not all)
+=> poverty trap, big boost, good government, geography
+BOTTOM BILLION
+=> Relative poverty
+
+Chapter 14: The end of planet earth?
+population, rise of economy => global warming, pollution
+both optimistic, pessimistic are wrong
+
+Chapter 15: The end of youth?
+Aging => social security, medicare,
+Young work, old get => PAYGO => bucket bridgade is headed for a breakdown.
+=> Three painful options: cut benefits, increase taxes, borrow the money
+=> Tow relative painless (big challenges): 
+finding cheaper ways to provide health care, grow our way out of our financial problems
+
+Chapter 16: The end.
+Diffences between problem of micro and macro:
++ macro is having more trouble to taming its monster
++ 
+
+
+ 
+
+
+
