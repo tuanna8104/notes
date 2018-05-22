@@ -30,4 +30,17 @@ Performance optimizations: bloom filter, sized-tiered and leveled compaction,
 + Optimizations: Copy-on-write, abbreviating keys, pointer to sibling, fractal tree
 
 * B-Tree vs LSM-Trees
-+
++ LSM-Trees: write faster, lower write amplification, better compressed, less fragment, lower overhead
++ B-Tree: not need compaction, keys in exactly one place.
+
+* Other Indexing Structures:
++ positing list => key, row identifier => key
++ heap file, clustered index, covering index
++ concatenated index, R-tree, 2D index,
++ in-memory databases: memcached, memsql, redis, couchbase, v..v..., anti-caching,non-volatile memory.
+
+* OLTP (Transcation) vs OLAP (Analytics)
++ OLAP <= Data Warehouse <= Extract-Transform-Load <= OLTP
++ Star Schema, dimension tables; snowflake schema
+
+* Column-Oriented Storage
