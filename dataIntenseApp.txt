@@ -44,3 +44,7 @@ Performance optimizations: bloom filter, sized-tiered and leveled compaction,
 + Star Schema, dimension tables; snowflake schema
 
 * Column-Oriented Storage
++ Column Compression: bitmap encoding, vectorized processing, sort order
++ Writing: use LSM-Trees, materialized view
+
+Chapter 4: Encoding and Evolution 
