@@ -52,4 +52,24 @@ Application changes => data changes => code changes:
 + Backward compatibility (not hard)
 + Forward compatibility (tricky)
 
- 
+* Format:
++ in-memory(pointers, data structures) => in-network (byte sequence): encoding
++ in-network => in-memory: decoding
+
+1) XML, JSON
+- Problems: 
++ Too large number for IEEE754 double-precision (Javascript)
++ Don't support binary strings, if use Base64 -> data size increases 33%
+- Using for interchange
+
+2) Binary encoding
+- compact, faster => using for internally
+- Thrift (facebook), Protocol Buffers(google) : has a schema definition
+- Avro (Hadoop):
++ Schema: Avro IDL, JSON
++ Dynamically generated schemas
++ 
+- The Merits of Schemas: compact, documentation, check compatibility, generate code
+
+3) Modes of Dataflow:
++ Through Databases: 
