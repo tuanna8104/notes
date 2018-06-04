@@ -1,6 +1,11 @@
 + Describing Performance: percentiles, tail latencies, head-of-line blocking
 + Coping with Load: scaling up (vertical scaling), scaling out(horizontal scaling), shared-nothing architecture, elastic
 
+Reliability:
++ Tolerating hardware & software fault, human error
+Scalability
++ Measuring load & performance
++ Latency percentiles, through put
 Maintainability
 + Operability, Simplicity, Evolvability
 
@@ -51,6 +56,7 @@ Chapter 4: Encoding and Evolution
 Application changes => data changes => code changes:
 + Backward compatibility (not hard)
 + Forward compatibility (tricky)
++ Rolling update
 
 * Format:
 + in-memory(pointers, data structures) => in-network (byte sequence): encoding
@@ -67,9 +73,15 @@ Application changes => data changes => code changes:
 - Thrift (facebook), Protocol Buffers(google) : has a schema definition
 - Avro (Hadoop):
 + Schema: Avro IDL, JSON
-+ Dynamically generated schemas
++ Dynamically generated schemas, code
 + 
 - The Merits of Schemas: compact, documentation, check compatibility, generate code
 
 3) Modes of Dataflow:
-+ Through Databases: 
+- Through Databases: 
+- Through Services:
++ REST => public API
++ RPC: complex, fundamentally different with local function, service discovery => between services
+
+4) Message-Passing Dataflow
++ message queue(broker), distributed actor (Akka, Orleans, Erlang OTP)
