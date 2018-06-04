@@ -9,3 +9,7 @@ a(i)x(i) >= r - l + a(i)max(x(i))
 b(i)y(i) <= l - r + b(i)min(y(i))
 
 + Rectification: Constrainst: 0 or 1
+
++ Global Constraint:
+Example: alldiferent(x1,...,xn)
+Why? Feasibility testing & pruning
