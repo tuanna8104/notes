@@ -3,5 +3,16 @@ Distributed Data reasons:
 Shared-Nothing Architectures
 + replication (chapter 5), partition (chapter 6), transactions (chapter 7), fundamental limitation (chapter 8-9)
 
-CHAPTER 5:
-Replication
+CHAPTER 5: Replication
+*Problem: handling changes and failed
+*Synchronous vs Asynchronous
+
+*Leaders/Followers (active/passive, master/slave)
+- setting up new followers: snapshot at leader => copy snapshot to follower => follower connect to leader, request data => caught up
+- handling not outages:
++ follower failure: catch-up recovery
++ leader failure: failover
+- replication logs
++ 
+
+

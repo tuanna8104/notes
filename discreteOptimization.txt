@@ -1,15 +1,17 @@
 1) Constraint Programming
-+ Branch and Prune
-+ Search, Constraint Store, Domain Store.
-+ Linear Constraint:
+* Branch and Prune
+* Search, Constraint Store, Domain Store.
+* Linear Constraint:
 a(1)x(1) + …. a(n)x(n) >= b(1)y(1) + …. + b(m)y(m)
 r = b(1)min(y(1)) + b(2)min(y(2)) + …..
 l = a(1)max(a(1)) + a(2)max(a(2))+ …..
 a(i)x(i) >= r - l + a(i)max(x(i))
 b(i)y(i) <= l - r + b(i)min(y(i))
 
-+ Rectification: Constrainst: 0 or 1
+* Rectification: Constrainst: 0 or 1
 
-+ Global Constraint:
+* Global Constraint:
 Example: alldiferent(x1,...,xn)
 Why? Feasibility testing & pruning
+
+* Symmetry breaking: imposing order
