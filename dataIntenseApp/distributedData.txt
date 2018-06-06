@@ -9,10 +9,14 @@ CHAPTER 5: Replication
 
 *Leaders/Followers (active/passive, master/slave)
 - setting up new followers: snapshot at leader => copy snapshot to follower => follower connect to leader, request data => caught up
+
 - handling not outages:
 + follower failure: catch-up recovery
 + leader failure: failover
+
 - replication logs
-+ 
++ statement-based
++ write-ahead log (WAL) shipping
+
 
 
