@@ -17,6 +17,10 @@ CHAPTER 5: Replication
 - replication logs
 + statement-based
 + write-ahead log (WAL) shipping
++ Logical (row-based) log (****)
++ trigger-based
+
+- replication lag
 
 
 
