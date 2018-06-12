@@ -15,3 +15,6 @@ Example: alldiferent(x1,...,xn)
 Why? Feasibility testing & pruning
 
 * Symmetry breaking: imposing order
+* Redundant constraints: 
+not exclude any solution but reduce the search space
+Properties of solutions, not captured by the model
