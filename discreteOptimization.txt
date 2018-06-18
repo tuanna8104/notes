@@ -18,3 +18,4 @@ Why? Feasibility testing & pruning
 * Redundant constraints: 
 not exclude any solution but reduce the search space
 Properties of solutions, not captured by the model
+Surrogate constraints
