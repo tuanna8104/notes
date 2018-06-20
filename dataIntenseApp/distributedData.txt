@@ -27,6 +27,13 @@ Read-scaling: asynchronous replication => replication lag
 + Consistent prefix-read
 
 * Mutileader replication
+Multi-datacenter operation 
+-> inner-datacenter network delay, leader fails, network fails
+-> write conflicts,
+offline operation, collaborative editing
+Handling write conflicts: synchronous vs asynchronous conflict detection, conflict avoidance,  
+
+
 
 
 
