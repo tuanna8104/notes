@@ -33,6 +33,14 @@ Multi-datacenter operation
 offline operation, collaborative editing
 Handling write conflicts: synchronous vs asynchronous conflict detection, conflict avoidance,  
 
+- Automatic Conflict Resolution
+Conflict-free replicated datatypes
+Mergeable persistent data structures
+Operation transformation
+
+- Multi-Leader Replication Topologies
+
+
 
 
 
