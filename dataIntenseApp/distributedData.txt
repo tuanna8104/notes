@@ -7,7 +7,7 @@ CHAPTER 5: Replication
 *Problem: handling changes and failed
 *Synchronous vs Asynchronous
 
-*Leaders/Followers (active/passive, master/slave)
+* Leaders/Followers (active/passive, master/slave)
 - setting up new followers: snapshot at leader => copy snapshot to follower => follower connect to leader, request data => caught up
 
 - handling not outages:
@@ -21,6 +21,28 @@ CHAPTER 5: Replication
 + trigger-based
 
 - replication lag
+Read-scaling: asynchronous replication => replication lag
++ Read-your-writes consistency
++ Monotonic reads
++ Consistent prefix-read
+
+* Mutileader replication
+Multi-datacenter operation 
+-> inner-datacenter network delay, leader fails, network fails
+-> write conflicts,
+offline operation, collaborative editing
+Handling write conflicts: synchronous vs asynchronous conflict detection, conflict avoidance,  
+
+- Automatic Conflict Resolution
+Conflict-free replicated datatypes
+Mergeable persistent data structures
+Operation transformation
+
+- Multi-Leader Replication Topologies
+
+
+
+
 
 
 
