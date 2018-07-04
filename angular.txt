@@ -1,0 +1,23 @@
+- One root module => many more feature modules
+- Components: -> At least a root component 
++ Define view, metadata: template (HTML + angular directives + binding markup)
++ Use services, metadata: Dependency Injection
+
+- Modules: (ES2015 Javascript module) A compilation context for a set of components (NgModule)
+- Components: @Component
+- Templates, directives, data binding
++ Two-way data binding, pipes,
+- Services and dependency injection:
+@Injectable
+Routing
+
+*Src folder: AppComponent, AppModule, asset, environments, browserslist, karma,
+main.ts: 
+(JIT compiler: ng build, ng serve; 
+AOT compiler: ng build —-aot, ng serve -—aot) 
+polyfills.ts, styles.css, test.ts, tsconfig(app|spec).json
+tslint.json 
+*Root folder
+
+Pipes
+
