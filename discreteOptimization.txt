@@ -1,5 +1,5 @@
 Model => Domain, Constraints => Propagation
-
+(Prune => Search)
 1) Constraint Programming
 * Branch and Prune
 * Search, Constraint Store, Domain Store.
@@ -24,4 +24,10 @@ Properties of solutions, not captured by the model
 Surrogate constraints
 Dual modeling
 
+Alldiffirent => bipartite graph (maximum matching)
+=> start with any matching 
+=> improve (alternating paths) => Prune (Basic property - Berge, 1970)
 
+* Search
+First-fail principle
+Euler Knight
