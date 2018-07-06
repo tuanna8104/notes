@@ -1,5 +1,5 @@
 Model => Domain, Constraints => Propagation
-(Prune => Search)
+(Prune => Search => Constrains Store)
 1) Constraint Programming
 * Branch and Prune
 * Search, Constraint Store, Domain Store.
@@ -31,3 +31,8 @@ Alldiffirent => bipartite graph (maximum matching)
 * Search
 First-fail principle
 Euler Knight
+* Nondeterministic computations: 
+variable/value labeling: 
+- variable: smallest domain, most constrained
+- value: leave many options
+
