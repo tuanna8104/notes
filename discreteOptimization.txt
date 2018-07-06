@@ -1,6 +1,6 @@
 Model => Domain, Constraints => Propagation
 (Prune => Search => Constrains Store)
-1) Constraint Programming
+A) Constraint Programming
 * Branch and Prune
 * Search, Constraint Store, Domain Store.
 * Linear Constraint:
@@ -32,7 +32,10 @@ Alldiffirent => bipartite graph (maximum matching)
 First-fail principle
 Euler Knight
 * Nondeterministic computations: 
-variable/value labeling: 
+1) variable/value labeling: 
 - variable: smallest domain, most constrained
 - value: leave many options
+ESDD Deployment => Generalized quadratic assignment problem
+Using object funtion to drive the search
 
+2) value/variable labeling: (scheduling, resource allocation problems)
