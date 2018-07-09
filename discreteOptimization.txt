@@ -38,4 +38,8 @@ Euler Knight
 ESDD Deployment => Generalized quadratic assignment problem
 Using object funtion to drive the search
 
-2) value/variable labeling: (scheduling, resource allocation problems)
+2) value/variable labeling:
+The perfect square
+
+3) Domain splitting
+The magic number square
