@@ -42,4 +42,4 @@ Using object funtion to drive the search
 The perfect square
 
 3) Domain splitting
-The magic number square
+The magic number square => week commiment with domains
