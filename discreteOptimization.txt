@@ -36,10 +36,13 @@ Euler Knight
 - variable: smallest domain, most constrained
 - value: leave many options
 ESDD Deployment => Generalized quadratic assignment problem
-Using object funtion to drive the search
 
-2) value/variable labeling:
+2) Using object funtion to drive the search
+
+3) value/variable labeling:
 The perfect square
 
-3) Domain splitting
-The magic number square => week commiment with domains
+4) Domain splitting
+The magic number square => weak commiment with domains
+
+5) Symmetry breaking
