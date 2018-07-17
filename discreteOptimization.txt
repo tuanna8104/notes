@@ -46,3 +46,4 @@ The perfect square
 The magic number square => weak commiment with domains
 
 5) Symmetry breaking
+6) Randomization and restarts
