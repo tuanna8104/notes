@@ -5,3 +5,7 @@ Satisfaction Problems:
 - Use Max/Min - Conflict: 
 + choose a decision variable that appear in the most violations
 + assign to a value that minimize its violations
+
+Swap:
+- Maintain hard constraints, try soft constraints
+- Need good model about voliation to provide insight information
