@@ -1,0 +1,7 @@
+Local move from this configuration to that configuration
+Constrast with constraint programming
+
+Satisfaction Problems:
+- Use Max/Min - Conflict: 
++ choose a decision variable that appear in the most violations
++ assign to a value that minimize its violations
