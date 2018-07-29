@@ -9,3 +9,9 @@ Satisfaction Problems:
 Swap:
 - Maintain hard constraints, try soft constraints
 - Need good model about voliation to provide insight information
+
+Many ways to choose neighbours
+Examples:
+- Warehouse location: Open and close, swap
+- Travelling salesman: 2-OPT, 3-OPT, 4-OPT, .... more => more better but more expansives,
+  K-OPT (sequence of swaps)
