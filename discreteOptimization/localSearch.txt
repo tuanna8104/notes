@@ -15,3 +15,14 @@ Examples:
 - Warehouse location: Open and close, swap
 - Travelling salesman: 2-OPT, 3-OPT, 4-OPT, .... more => more better but more expansives,
   K-OPT (sequence of swaps)
+
+Graph coloring:
+- Sequence of feasibility problems:
++ find an initial solution with k colors
++ remove one colore
++ find a feasible solution with k - 1 colors => try to minimize number of violations in each steps
++ repeat
+- Staying in the space of solutions:
++ Color classes: C(i)
++ Drive the search: favor large color classes, objective function: max(sum(C(i)*C(i)))
++ Route the neighbour: Kemp Chains
