@@ -26,3 +26,8 @@ Graph coloring:
 + Color classes: C(i)
 + Drive the search: favor large color classes, objective function: max(sum(C(i)*C(i)))
 + Route the neighbour: Kemp Chains
+- Exploring both feasible and infeasible colorings:
++ make sure local optima are feasible
++ use an objective function to balance feasibility and optimality
++ neighbourhood: change color of a vertex
++ bad edges: two vertice same color, B(i): set of bad egde between two vertices with color i
