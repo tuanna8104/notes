@@ -1,12 +1,12 @@
 Local move from this configuration to that configuration
 Constrast with constraint programming
 
-Satisfaction Problems:
+* Satisfaction Problems:
 - Use Max/Min - Conflict: 
 + choose a decision variable that appear in the most violations
 + assign to a value that minimize its violations
 
-Swap:
+* Swap:
 - Maintain hard constraints, try soft constraints
 - Need good model about voliation to provide insight information
 
@@ -16,7 +16,7 @@ Examples:
 - Travelling salesman: 2-OPT, 3-OPT, 4-OPT, .... more => more better but more expansives,
   K-OPT (sequence of swaps)
 
-Graph coloring:
+* Graph coloring:
 Method 1: Sequence of feasibility problems:
 + find an initial solution with k colors
 + remove one colore
@@ -37,4 +37,7 @@ MIN(sum(B(i)))
 + use an objective function to balance feasibility and optimality
 MIN(SUM(2*B(i)*C(i)) - SUM(C(i)^2)) 
 
-Escaping local minima: connectivity, 
+* Sport Scheduling (TTP)
+Swap Homes, Swap Rounds, Swap Teams, Swap Parital Rounds, Swap Partial Teams 
+
+* Escaping local minima: connectivity, 
