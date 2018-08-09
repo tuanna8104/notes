@@ -41,3 +41,5 @@ MIN(SUM(2*B(i)*C(i)) - SUM(C(i)^2))
 Swap Homes, Swap Rounds, Swap Teams, Swap Parital Rounds, Swap Partial Teams 
 
 * Escaping local minima: connectivity, 
+* Heuristics: next nieghbour, local information, towards a local minimum
+* Metaheuristics: escaping local minima, towards a global minimum, inculde some memory or learning
