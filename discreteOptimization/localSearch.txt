@@ -42,4 +42,17 @@ Swap Homes, Swap Rounds, Swap Teams, Swap Parital Rounds, Swap Partial Teams
 
 * Escaping local minima: connectivity, 
 * Heuristics: next nieghbour, local information, towards a local minimum
+Best neighbor, first neighbor, multi-stage selection: max/min-conflict, min-conflict, random walks: random improvement, 
 * Metaheuristics: escaping local minima, towards a global minimum, inculde some memory or learning
+Iterated Local Search, 
+Metropolis heuristic: accept a move if it improve the object function, or with some probability when not
+Simulated Annealing: adjust the temperature in Metropolis dynamically, start with high temperature, decrease progressively
+Tabu search: 
++ Tabu list, Tabu node: node already visited
++ Short time memory, change size of the list dynamically
++ Transition abstractions
++ Aspiration: if the move is so good, override the tabu list
++ Long-Term Memory: 
+1. intensification: store high-quality solutions, return to them periodically
+2. diversification: diversify the current state (randomly change some variables)
+3. strategic oscillation: change % of time spent in feasible and infeasible regions
