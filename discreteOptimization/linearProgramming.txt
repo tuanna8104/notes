@@ -1,1 +1,6 @@
-Convex Set
+Convex Set (Convex Combination)
+intersection of a set of half spaces: polyhedron, finite => polytope
+n-1 : Hyperplane, 0: vertex
+Optimal Solution is one of vertices
+
+Simplex Algorithm:
