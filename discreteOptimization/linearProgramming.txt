@@ -3,4 +3,7 @@ intersection of a set of half spaces: polyhedron, finite => polytope
 n-1 : Hyperplane, 0: vertex
 Optimal Solution is one of vertices
 
+Naive Algorithm:
+Find all basic feasible solution => find best
+
 Simplex Algorithm:
