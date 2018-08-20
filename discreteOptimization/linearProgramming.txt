@@ -7,3 +7,19 @@ Naive Algorithm:
 Find all basic feasible solution => find best
 
 Simplex Algorithm:
+* Move to another BFS:
+- Select a non-basic variable with negative coefficient: entering variable
+- Introduce this variable in the basis by removing a basic variable: leaving variable
+- Perform Gaussian elimination
+=> Local move: swapping, called: "pivoting" pivot(e, l)
+Maintain feasibility: arg-min(b(i)/-a(ie))
+
+* Check if a BFS is optimal:
+if all coefficient in objective function is positive
+
+* If coefficient in objective function is negative, but in all constraints, it is positive => optimize infinitely => wrong model
+Add lexicographic when choose the entering variable and the leaving variable or perturbation method
+
+* Find my first BFS: Add artifical variables => Find a basic feasible solution => return to original problem.
+
+Matrix Notation:
