@@ -23,3 +23,6 @@ Add lexicographic when choose the entering variable and the leaving variable or 
 * Find my first BFS: Add artifical variables => Find a basic feasible solution => return to original problem.
 
 Matrix Notation:
+A(b)*x(b) + A(n)*x(n) = B
+=> x(b) = B' - A'(n)*x(n), feasible if b' >= 0
+* Cost: c(x) = c(b)*x(b) + c(n)*x(n)
