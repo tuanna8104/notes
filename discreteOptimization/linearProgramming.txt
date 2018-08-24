@@ -26,3 +26,13 @@ Matrix Notation:
 A(b)*x(b) + A(n)*x(n) = B
 => x(b) = B' - A'(n)*x(n), feasible if b' >= 0
 * Cost: c(x) = c(b)*x(b) + c(n)*x(n)
+c(x) = c(b)*A(b)^-1*b + (c - c(b)*A(b)^-1*A)x
+Pie (Simplex Multipers) = c(b)*A(b)^-1 => c(x) = Pie*b + (c - Pie*A)x
+The Basis is Optimal If c>= PieA
+
+The Tableau:
+=> good representation, but in spare matrix, need other efficient methods.
+
+Duality derivation
+*Primal: min, Ax >= b
+*Dual: max, yA <= c;
