@@ -27,7 +27,7 @@ A(b)*x(b) + A(n)*x(n) = B
 => x(b) = B' - A'(n)*x(n), feasible if b' >= 0
 * Cost: c(x) = c(b)*x(b) + c(n)*x(n)
 c(x) = c(b)*A(b)^-1*b + (c - c(b)*A(b)^-1*A)x
-Pie (Simplex Multipers) = c(b)*A(b)^-1 => c(x) = Pie*b + (c - Pie*A)x
+Pie (Simplex Multipers) = c(b)*A(b)^-1 => c(x) = Pie*B + (c - Pie*A)x
 The Basis is Optimal If c>= PieA
 
 The Tableau:
@@ -36,3 +36,9 @@ The Tableau:
 Duality derivation
 *Primal: min, Ax >= b
 *Dual: max, yA <= c;
+Primal => (flip) => Dual
+If the primal has an optimal solution => the dual has an optimal solution with the same cost
+cx >= yb
+x is Optimal solution for Primal => Pie (Simplex Multipers) is Optimal Solution for Dual
+
+Duality Interpretation
