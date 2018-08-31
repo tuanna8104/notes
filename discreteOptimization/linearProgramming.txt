@@ -42,3 +42,4 @@ cx >= yb
 x is Optimal solution for Primal => Pie (Simplex Multipers) is Optimal Solution for Dual
 
 Duality Interpretation
+* Add a violated constraint => the dual is still feasible => optimize the dual => primal feasible at optimality
