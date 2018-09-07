@@ -1,1 +1,15 @@
 Same format as Linear Programming, but some of variables is integer.
+
+Model:
+- Decision Variables
+- Constraints
+- Objectives
+
+Branch and bound:
+- Bounding: finding an optimistic relaxation
+- Branching: splitting the problem in subproblems
+
+Linear relaxation:
+- Worse than best => prune
+- Integral => update best
+- Otherwise, two subproblems: x <= floor(f) and x>= ceil(f), repeat algorithm on the subproblems
