@@ -13,3 +13,8 @@ Linear relaxation:
 - Worse than best => prune
 - Integral => update best
 - Otherwise, two subproblems: x <= floor(f) and x>= ceil(f), repeat algorithm on the subproblems
+
+Modeling techniques
+- need good linear relaxation
+
+Big-M Transformation
