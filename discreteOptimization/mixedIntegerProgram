@@ -18,3 +18,12 @@ Modeling techniques
 - need good linear relaxation
 
 Big-M Transformation
+x <> y => x <= y -1 || x >= y + 1 => x <= y - 1 + bM && x >= y + 1 + (1-b)M (b: 0 || 1) (M: big integer)
+=> not good linear relaxation for graph coloring
+=> Better: 
+x(b=0) + y(b=0) <= 1
+x(b=1) + y(b=1) <= 1
+x(b=2) + y(b=2) <= 1
+x(b=3) + y(b=3) <= 1
+
+
