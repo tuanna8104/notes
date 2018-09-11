@@ -30,4 +30,13 @@ Cutting Planes:
 - valid: not remove any feasible solution
 - helps: cuts the optimal solution to the linear relaxation
 How to find these cuts:
-- Look inside the tableau
+- Look inside the tableau: Gomory Cut: x1 + Sum(a1j*xj) = b1, 
+if b1 is not a integer, we have: x1 + Sum(floor(a1j)*xj) <= floor(b1)
+=> have a new constraint: sum((a1j - floor(a1j))*xj) >= b1 - floor(b1)
+With j is these artifical variables
+Solve the linear relaxtion => choose a row whose constant is fractional => Add the Goromy Cut => dual simplex to obtain feasibilty
+=> Iterate => Integral or no feasible solution
+
+Polyhedral cuts
++ Cuts that represent the facets of the convex hull of the integer solutions
+=> Derived from the structure of constraints, not based on information in the tableau
