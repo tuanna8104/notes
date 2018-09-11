@@ -26,4 +26,8 @@ x(b=1) + y(b=1) <= 1
 x(b=2) + y(b=2) <= 1
 x(b=3) + y(b=3) <= 1
 
-
+Cutting Planes:
+- valid: not remove any feasible solution
+- helps: cuts the optimal solution to the linear relaxation
+How to find these cuts:
+- Look inside the tableau
