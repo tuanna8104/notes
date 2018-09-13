@@ -40,3 +40,4 @@ Solve the linear relaxtion => choose a row whose constant is fractional => Add t
 Polyhedral cuts
 + Cuts that represent the facets of the convex hull of the integer solutions
 => Derived from the structure of constraints, not based on information in the tableau
+=> Valid, as strong as possible (proof: use affine independence)
