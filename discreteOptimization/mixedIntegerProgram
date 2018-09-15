@@ -18,7 +18,7 @@ Modeling techniques
 - need good linear relaxation
 
 Big-M Transformation
-x <> y => x <= y -1 || x >= y + 1 => x <= y - 1 + bM && x >= y + 1 + (1-b)M (b: 0 || 1) (M: big integer)
+x <> y => x <= y -1 || x >= y + 1 => x <= y - 1 + bM && x >= y + 1 = (1-b)M (b: 0 || 1) (M: big integer)
 => not good linear relaxation for graph coloring
 => Better: 
 x(b=0) + y(b=0) <= 1
@@ -41,3 +41,19 @@ Polyhedral cuts
 + Cuts that represent the facets of the convex hull of the integer solutions
 => Derived from the structure of constraints, not based on information in the tableau
 => Valid, as strong as possible (proof: use affine independence)
+
+Cover
+- a(j)*b(j) <= b, C ⊆ N = [1,..., n] sum(a(j)) > b, j in C. 
+- minimal cover: C - {j} not cover for any j
+Cover Cut: sum(x(j)) <= C - 1 j in C
+Strong Cover Cut:sum(x(j)) <= C - 1 j in E(C). E(C) = C add {j, a(j)>= a(i) with every i in C}
+
+Branch and Cut:
+1. Formulate the application as MIP
+2. Linear relaxation => intergal: terminate
+3. Not, find a polyhedral cut, if find => 2
+4. Branch
+
+The Separation Problem
+1. Solution x* for linear relaxation possibly enhanced by cuts
+2. Where there exists a cover cut that cut x*
