@@ -57,3 +57,6 @@ Branch and Cut:
 The Separation Problem
 1. Solution x* for linear relaxation possibly enhanced by cuts
 2. Where there exists a cover cut that cut x*
+sum(x(j)) <= C - 1  => sum(1 - x(j)) >= 1
+So, if we have sum(1-x*(j)) < 1 (1) && sum(a(j)) > b (2)
+=> Exists a cover cut that cut x*
