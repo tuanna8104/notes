@@ -63,3 +63,4 @@ So, if we have sum(1-x*(j)) < 1 (1) && sum(a(j)) > b (2)
 => A problem: Find min (1-x*)z While az > b. If min < 1 => all variables = 1 is a cover
 
 Seven Bridges of Konigsberg
+TSP => MIP: decision variables, constraints, objectives
