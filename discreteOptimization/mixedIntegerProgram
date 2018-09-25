@@ -63,4 +63,12 @@ So, if we have sum(1-x*(j)) < 1 (1) && sum(a(j)) > b (2)
 => A problem: Find min (1-x*)z While az > b. If min < 1 => all variables = 1 is a cover
 
 Seven Bridges of Konigsberg
+
 TSP => MIP: decision variables, constraints, objectives
+- x(e) = 0 (Edge not in solution), x(e) = 1 (Edge in solution) x{1....n} = x(1) + x(2) + ... + x(n)
+- First Model:
+min sum(x(e)*c(e)) subject to x{edgeTo(v)) = 2, x{edgeIn{S}} < |S| - 1 (S is a subchild of V), x(e) = {0, 1} 
+
+- There are too many subTour constraint => Branch and Cut: seperation on demand 
+x{edgeIn{S}} < |S| - 1 => x{edgeTo(S)) >= 2 (S is a subchild of V)
+Build a graph G* ={V,E} w(e) = x*(e)
