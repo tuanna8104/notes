@@ -1,0 +1,66 @@
+PACKAGE
+import (
+  "fmt"
+  "math"
+)
+
+FUNCTION
+func main() {
+  fmt.Println(math.Pi)
+}
+
+func swap (x,y string) (string, string) {
+  return y,x
+}
+
+FOR LOOP
+for i:=0; i < 10; i++ {
+  sum += i
+}
+for ; i < 10; {
+  i++
+}
+for i < 10 {
+  i++
+}
+for {
+}
+
+IF STATEMENT
+if x < 0 {
+  return sqrt(-x)
+}
+if x:= math.Pow(v, n); x < lim {
+  return x
+} else {
+  fmt.Println(x)
+}
+
+SWITCH KEYWORD
+func main() {
+  btt := 2
+  i := 1
+  switch i {
+  case btt - 1:
+    fmt.Println("HELLO")
+  case btt:
+    fmt.Println("TEST")
+  default:
+    fmt.Println("Default")
+  }
+  
+  switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+}
+
+DEFER
+func main() {
+	defer fmt.Println("world")
+  fmt.Println("hello")
+}
