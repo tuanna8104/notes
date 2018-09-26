@@ -1,0 +1,7 @@
+1. Scheduling with Constraint Programming
+Minimize project duration subject to a) precedence constraints b) disjunctive constraints
+
+Jobshop Scheduling:
+task T, duration d(T), task excutes on a machine m(T) - not overlap, precedence constraints (b,a) in jobs
+=> Minimize project completion time
+Machine handle task sequentially => A solution find an ordering of the tasks on each machine
