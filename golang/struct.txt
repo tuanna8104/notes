@@ -1,0 +1,165 @@
+STRUCTS
+type Vertex struct {
+	X int
+	Y int
+}
+
+func main() {
+	v := Vertex{1, 2}
+	p := &v
+	p.X = 1e9
+	fmt.Println(v)
+}
+
+var (
+  v1 = Vertex{1, 2}  // has type Vertex
+  v2 = Vertex{X: 1}  // Y:0 is implicit
+  v3 = Vertex{}      // X:0 and Y:0
+  p  = &Vertex{1, 2} // has type *Vertex
+)
+
+ARRAY
+func main() {
+  primes := [6]int{2, 3, 5, 7, 11, 13}
+  fmt.Println(primes)
+  var s []int = primes[1:4]
+  fmt.Println(s)
+}
+
+SLICE
+slice is references to arrays, change slice => change arrays
+func main() {
+  s := []struct {
+    i int
+    b bool
+  }{
+    {2, true},
+    {3, false}, 
+    {5, true},
+    {7, true},
+    {11, false},
+    {13, true},
+  }
+  fmt.Println(s)
+}
+Slice has a length: number of elements it containts 
+and a capacity: first element in slice => end elements in the underlying array
+func main() {
+  s := []int{2, 3, 5, 7, 11, 13}
+  printSlice(s)
+
+  // Slice the slice to give it zero length.
+  s = s[:0]
+  printSlice(s)
+
+  // Extend its length.
+  s = s[:4]
+  printSlice(s)
+}
+
+func printSlice(s []int) {
+  fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+}
+
+a := make([]int, 5)  // len(a)=5
+b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+b = b[:cap(b)] // len(b)=5, cap(b)=5
+b = b[1:]      // len(b)=4, cap(b)=4
+
+var s []int
+s = append(s, 2, 3, 4)
+copy(b, a)
+
+
+RANGE
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+func main() {
+  for i, v := range pow {
+    fmt.Printf("2**%d = %d\n", i, v)
+  }
+　　　　for i := range pow {
+　　　　　　　　pow[i] = 1 << uint(i) // == 2**i
+　　　　}
+　　　　for _, value := range pow {
+　　　　　　　　fmt.Printf("%d\n", value)
+　　　　}
+}
+func Pic(dx, dy int) [][]uint8 {
+  var scale [][]uint8
+  for y := 0; y < dy; y++ {
+     scaleX := make([]uint8, dx)
+	 for x:= range scaleX {
+	 	scaleX[x] = uint8(x^y/2)
+	 }
+	 scale = append(scale, scaleX)
+  }
+  return scale
+}
+
+
+MAP
+type Vertex struct {
+	Lat, Long float64
+}
+
+var m map[string]Vertex
+func main() {
+	m = make(map[string]Vertex)
+	m["Bell Labs"] = Vertex{
+		40.68433, -74.39967,
+	}
+	fmt.Println(m["Bell Labs"])
+	delete(m["Bell Lab"])
+	v, ok := m["Bell Lab"]
+}
+
+var m = map[string]Vertex{
+  "Bell Labs": {40.68433, -74.39967},
+  "Google": {37.42202, -122.08408},
+}
+func WordCount(s string) map[string]int {
+	mapResult := make(map[string]int)
+	stringList := strings.Split(s, " ")
+	for _, str := range stringList {
+		count, hasCount := mapResult[str]
+		if (hasCount) {
+			mapResult[str] = count + 1
+		} else {
+			mapResult[str] = 1
+		}
+	}
+	return mapResult
+}
+
+
+Function values, closures
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+func main() {
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
+}
+func fibonacci() func() int {
+	prev := 0
+	cur:= 0
+	return func() int {
+		tmp := cur
+		if (cur == 0) {
+			cur = 1;
+		} else {
+			cur += prev
+		}
+		prev = tmp
+		return tmp;
+	}
+}
