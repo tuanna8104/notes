@@ -1,0 +1,18 @@
+Method:  
+a function with Special receiver argument,  whose type is defined in the same package as the method.
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func main() {
+	v := Vertex{3, 4}
+	fmt.Println(v.Abs())
+}
+
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+In general, all methods on a given type should have either value or pointer receivers, but not a mixture of both. 
+
