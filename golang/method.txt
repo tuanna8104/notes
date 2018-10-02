@@ -1,4 +1,4 @@
-Method:  
+METHOD:  
 a function with Special receiver argument,  whose type is defined in the same package as the method.
 func (v Vertex) Abs() float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
@@ -16,3 +16,56 @@ func (v *Vertex) Scale(f float64) {
 
 In general, all methods on a given type should have either value or pointer receivers, but not a mixture of both. 
 
+INTERFACES: Interfaces are implemented implicitly, (value, type)
+type MyFloat float64
+
+type Abser interface {
+  Abs() float64
+}
+
+func main() {
+	var a Abser
+	f := MyFloat(-math.Sqrt2)
+	v := Vertex{3, 4}
+
+	a = f  // a MyFloat implements Abser ({-math.Sqrt2}, main.MyFloat)
+	a = &v // a *Vertex implements Abser (&{3.4}, *main.Vertex)
+
+	fmt.Println(a.Abs())
+}
+
+func (f MyFloat) Abs() float64 {
+  if f < 0 {
+    return float64(-f)
+  }
+  return float64(f)
+}
+
+type Vertex struct {
+  X, Y float64
+}
+
+func (v *Vertex) Abs() float64 {
+  return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func (t *T) M() {
+  if t == nil {
+    fmt.Println("<nil>")
+    return
+  } 
+  fmt.Println(t.S)
+}
+
+var i interface{} Empty inteface hold values of any type
+
+TYPE ASSERTIONS
+func main() {
+  var i interface{} = "hello"
+  
+  s := i.(string)
+  fmt.Println(s)
+  
+  f, ok := i.(float64)
+  fmt.Println(f, ok)
+}
