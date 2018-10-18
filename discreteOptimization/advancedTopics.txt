@@ -5,3 +5,10 @@ Jobshop Scheduling:
 task T, duration d(T), task excutes on a machine m(T) - not overlap, precedence constraints (b,a) in jobs
 => Minimize project completion time
 Machine handle task sequentially => A solution find an ordering of the tasks on each machine
+
+Feasibilty of Disjunctive Constraints: Olog(N^2), preemptive scheduling => O(nlog(n))
+Disjunctive Pruning.
+
+Basic strategy: chooose a machine, sequence that machine, repeat
+Which machine? first-fail principles: tightest machine
+Which task? First, last or as tight as possible
