@@ -69,3 +69,23 @@ func main() {
   f, ok := i.(float64)
   fmt.Println(f, ok)
 }
+
+ERROR:
+i, err := strconv.Atoi("42")
+if err != nil {
+    fmt.Printf("couldn't convert number: %v\n", err)
+    return
+}
+fmt.Println("Converted integer:", i)
+
+func (T) Read(b []byte) (n int, err error)
+type rot13Reader struct {
+   r io.Reader
+}
+
+type Image interface {
+    ColorModel() color.Model
+    Bounds() Rectangle
+    At(x, y int) color.Color
+}
+
