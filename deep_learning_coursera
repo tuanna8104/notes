@@ -1,0 +1,347 @@
+	
+Hyperparameters:
+Learning rate
+Iterations
+Hidden Layer L
+Hidden Unit n(1), n(2)
+Choice of activation function
+
+Train/dev/test
+10,000 examples; 6/2/2
+
+1 million examples => dev: 10,000, test: 10,000 
+Mismatched train/test distribution
+
+High bias => Bigger Network (always work), Train longer (sometimes, doesn’t hurt), change NN mode
+
+High variance => More data, Regularzation,  change NN mode
+
+Course 2: 
+Regularization: L2 Regularization
+Dropout Regularization (Inverted dropout) frequently used by computer vision
+Data augmentation
+Early stopping
+(orthogonalization)
+
+Normalizing Inputs:
+Subtract Mean
+Normalize ]
+
+Vaninshing / Exploding gradients
+w(l) = np.random.randn(shape) * np.sqrt(2/ n(l-1))
+tanh => np.sqrt(1/n(l-1)) (Xavier initialization)
+
+Centered difference approximation (Two side difference)
+Gradient checking
+
+Mini-batch size = m => Batch gradient descent (small training set, <= 2000)
+Mini-batch size = 1 => Stochastic gradient descent
+Typical mini-batch size: 64 ~ 512
+Make sure mini batch fit in CPU/GPU memory
+
+Exponentially weighted averages
+Bias correction
+Gradient descent with momentum
+RMSprop => Root mean square prop
+Adam (Adaptive moment estimation) optimization algorithm
+Learning rate decay
+Local optima (saddle point)
+
+Tuning hyperparameters:
++ leanring rate
++ beta, hidden units, mini-batch size
++ layers, learning rate decay
+(beta1 =0.9, beta2 = 0.999, epsilon = 10 ^-8)
+
+Try random values, not use grid
+Coarse to fine
+==> Need to have appropriate scale, 
+ex: learning_rate => log scale
+
++ Babysit one model: huge data but not enough compute resources (Panda)
++ Train many models in parallel (Caviar)
+
+Batch Normalization
+Covariate shift
+
+Softmax Regression
+
+AI framework:
+How to choose:
++ Easy of programming (development and deployment)
++ Running speed
++ Truly open (open source with good governance)
+
+Tensorflow
+tf.placeholder(tf.float32, [3,1]]
+tf.Va]iable(0, dtype=tf.float32)
+
+Course 3:
+ML Strategy
+Orthogonalization
+Fit training set well (bigger network, Adam) => Fit dev set well (Regularization, Bigger training set) => Fit test set well (bigger  dev set, ) => Perform well in real world (Change dev set or cost function)
+
+Single number evaluation metric
+Example: precision, recall => need combine: F1 score
+Satisficing and Optimizing metric
+N metrics: one optimizing, N-1 => satisfying
+Dev/Test sets: same distributions, expected data in the future
+Step 1: Define metrics => Step 2: How to do well in this metrics
+
+Performance ML often slowdown when surpass human level (Bayes optimal error)
+Tactics when below human performance:
++ Ask human to label data
++ Manual error analysis
++ Bias/variance
+
+Avoidable bias
+Human-level error as a proxy for Bayes error
+Structured data, very large data => surpass human
+
+IMPROVE MODEL
+1. Avoidable Bias (Bigger Model, Longer, ADAM, Better NN architecture, Better Hyperparameters Sets)
+2. Variance (More Data, Regulazation, Better NN architecture, Better Hyperparameters Sets)
+
+Error Analysis
+So to summarize, to carry out error analysis, you should find a set of mislabeled examples, either in your dev set, or in your development set. And look at the mislabeled examples for false positives and false negatives. And just count up the number of errors that fall into various different categories. During this process, you might be inspired to generate new categories of errors, like we saw. 
+
+Cleaning up incorrectly labeled data
+1. If the errors are reasonably random in training set,then it's probably okay to just leave the errors
+2. If the errors doesn't make a significant difference to your ability to use the dev set to evaluate cost function => okey just leave
+
+=> Guildeline to fix:s
+1. Apply process to both dev set and train set
+2. Check all example wrong and right (Not always does when high accuracy
+3. Can do or not do in training set
+
+Build the first application quickly and then iterate.
+Setup dev/test set and metric, bias/variance analysis & Error analysis to prioritize next steps
+
+Training and testing on different distributions
+Now so set up your data this way has some advantages but also disadvantages. The advantage is that now you're training, dev and test sets will all come from the same distribution, so that makes it easier to manage. But the disadvantage, and this is a huge disadvantage, is that if you look at your dev set, of these 2,500 examples, a lot of it will come from the web page distribution of images, rather than what you actually care about, which is the mobile app distribution of images.
+
+Get other sources to training set, split own sources to training/dev/test set
+When difference occurs in dev set ==> create a train-dev set with same distribution
+=> can be a data mismatch problem
+=> General Formulation: + Human level, Train error, train-dev error
++ Data type 1, data type 2,…
+
+Address data mismatch
+Error manual analysis => make training data more similar, collect more similar data (artificial data synthesis => need to be noted on overfit with noise)
+
+Transfer learning 
++ Initialize weight only in last layer if not enough data
++ Pre-training, fine-tuning
+When transfer learning is good:
++ Same input
++ More data
++ Low level features helpful
+
+Multi-task learning
++ a set of tasks that could benefit from having shared low-level features
++ the amount of data you have for each task is quite similar
++ a big enough neural network to do well on all the tasks
+
+End-to-end deep learning
++ work only with big data
+If not enough data => break into sub-problems
+
+Course 4:
+Convolution Operator
++ Sobel Filter, Scharr Filter, learn by deep learning
+==> shrinking out put, not use egde
+==> fixed by padding
+
+Valid Convolution: no padding
+Same Convolution: output size same as input size
+
+Hyper Parameter
+- Size of filter
+- padding
+- stride
+- How many filters
+
+Type of Layers:
+- CONV
+- Pooling: Max Pooling, Average Pooling (usually f=2, s=2)
+- Fully connected: normal neuron network
+
+Two advantages:
+- Parameter sharing
+- Sparsity of connections
+
+Classic Network
++ LeNet 5: recognize hand-writting (32x32x1 grey-scale image)
+6 filter: 5x5x1 => avg pool f =2. s =2
+16 filter 5x5x6 => avg pool f =2, s = 2
+fc 120 x 400 => fc 84 x 120 => softmax
+
++ AlexNet: Input 227x227x3 
+96 filter 11 x 11 stride = 4 => max pool f=3, s=2
+256 same filter 5x5 => max pool f=3, s=2
+384 same filter 3x3  => 384 3x3 same filter
+256 same filter 3x3  => max pool f=3, s=2
+fc 4096 x 9216 => fc 4096 x 4096 => softmax 1000
+
++ VGG - 16
+
+Residual block:
+Shortcut/skip connection
+
+one by one convolution  (Network in Network)
+
+Inception Network Motivation
+bottleneck layer
+gooLeNet
+
+Open Source, Transfer Learning, Pre-compute
+
+Data augmentation:
+And in practice, there almost all competing visions task having more data will help
+- Type 1:
++ Mirror
++ Random crop
++ rotation
++ Shearing
++ Local wrapping
+- Color Shifting
++ PCA Color Augmenation
+
+Need tuning augmentation hyperparameters
+
+State of Computer Vision
+The spectrum between where you have relatively little data to where you have lots of data.
+Less data => Hand-engineering (Hacks), transfer learning
+
+Tip for doing well in benchmark/competitions:
+- Ensembling:
++ Train several NN independently => average output
+- Multi-crop at test time
++ Run classifier on multiple version of test images and average results
+
+Keras:
+ Create model => compile => fit => evaluate => predict
+
+OBJECT DETECTION
+Object Localization
+bounding box (bx, by, bh, bw)
+
+Object Detection: Sliding windows detection (Convolutional Implementation)
+
+YOLO Algorithm
+
+ Intersection Over(/) Union: IoU
+Non-max suppression,
++ Discard all box with pc < 0.6
++ Pick the largest pc as prediction
++ discard all remains with IoU >= 0.5
+
+Anchor Boxes
+use a K-means algorithm, to group together two types of objects shapes you tend to get.
+
+Region proposals
+First, run segmentation algorithm => Use CNN: Fast R-CNN => Use CNN for segmentation; Faster R-CNN 
+
+Face verification and face recognition
+One Shot Learning
+Siamese Network
++ Triplet Loss
+Choose “Triplet” that are hard to train
++ Binary Classification
+
+Neural style transfer
+Cost Function = alpha*Content Cost Function + beta*Style Cost Function:
+- Content Cost Function
+Use pre-trainted ConvNet (Ex: VCG)
+Middle Layer, not shallow not deep
+- Style Cost Function
+Style matrix (Gram matrix)
+
+Course 5:
+For commercial applications, for visual size commercial applications, dictionary sizes of 30 to 50,000 are more common and 100,000 is not uncommon.
+
+Two Problems with Normal (Naive) NN
+- the inputs and outputs can be different lengths and different examples. 
+- it doesn't share features learned across different positions of texts.
+
+Recurrent Neural Network Model
+Many - many
+Many - one
+One - Many
+One - One (not interesting)
+Encoder -> Decoder
+
+Language Model:  given any sentence is job is to tell you what is the probability of a sentence, of that particular sentence
+A training set comprising a large corpus of english text
+Tokenization
+Word-level language model vs Character-level language model
+
+So the trend I've been seeing in natural language processing is that for the most part, word level language model are still used, but as computers gets faster there are more and more applications where people are, at least in some special cases, starting to look at more character level models.
+
+Vanishing Gradients
+many local influences
+gradient clipping
+
+Gated Recurrent Unit (GRU)
+
+Long Short Term Memory (LSTM)
+peephole connection
+
+Bidirectional RNN
+ The disadvantage of the bidirectional RNN is that you do need the entire sequence of data before you can make predictions anywhere.
+So for a real type speech recognition applications, they're somewhat more complex modules as well rather than just using the standard bidirectional RNN as you've seen here
+
+Deep RNNs
+
+Week 2: Word embeddings
+Word Representation
+Word => Vector of features
+t-SNE
+
+Word embeddings
+1. Learn word embeddings from large text corpus
+2. Transfer embeddings to new task with smaller training set.
+3. Optional: Continue to finetune the world embeddings with new data
+
+Analogies using word vectors
+
+Embedding matrix
+
+Learning word embeddings with a language model
+
+Word2Vec
+Skip-grams
+Hierarchical softmax classifier.
+
+Negative Sampling
+k = 5 ~ 20: smaller data set
+k = 2 ~ 5: larger data set
+
+GloVe word vectors
+
+Sentiment Classification
+Word Vector ==> Work embeddings => n->1 RNN => softmax Y
+Debiasing word embeddings
+Word embeddings can reflect bias on training
+1. Identify bias direction
+2. Neutralize (Train a classifier to detect whether word is definitional
+3. Equalize pairs (Pick by hand?)
+
+Week 3: Sequence to Sequence
+Basic Models
+Encoder _ Decoder
+CONV Network => Feature => Encoder Input
+Because Decoder is same as language model ==> We call it conditional language model.
+
+Beam Search
+Length normalization: log, divine by length
+
+Bleu Score 
+bilingual evaluation understudy
+unigrams, bigrams, …, n-grams. ==> Combined Bleu Score
+
+Attention Model Intuition
+
+Speech recognition
+CTC cost for speech recognition
+(Connectionist temporal classification)
